@@ -29,10 +29,13 @@ Right
                                                 { _ivdDescription = Just
                                                     ( Description "The original language that `text` is provided in." )
                                                 , _ivdName = Name "fromLanguage"
-                                                , _ivdType = GqlTypeNamed
-                                                    ( NamedType
-                                                        { _namedTypeName = Name "Language" }
-                                                    )
+                                                , _ivdType = TypeWithNullability
+                                                    { _twnType = GqlTypeNamed
+                                                        ( NamedType
+                                                            { _namedTypeName = Name "Language" }
+                                                        )
+                                                    , _twnNullability = True
+                                                    }
                                                 , _ivdDefaultValue = Nothing
                                                 , _ivdDirectives = []
                                                 }
@@ -40,10 +43,13 @@ Right
                                                 { _ivdDescription = Just
                                                     ( Description "The translated language to be returned." )
                                                 , _ivdName = Name "toLanguage"
-                                                , _ivdType = GqlTypeNamed
-                                                    ( NamedType
-                                                        { _namedTypeName = Name "Language" }
-                                                    )
+                                                , _ivdType = TypeWithNullability
+                                                    { _twnType = GqlTypeNamed
+                                                        ( NamedType
+                                                            { _namedTypeName = Name "Language" }
+                                                        )
+                                                    , _twnNullability = True
+                                                    }
                                                 , _ivdDefaultValue = Nothing
                                                 , _ivdDirectives = []
                                                 }
@@ -51,19 +57,25 @@ Right
                                                 { _ivdDescription = Just
                                                     ( Description "The text to be translated." )
                                                 , _ivdName = Name "text"
-                                                , _ivdType = GqlTypeNamed
-                                                    ( NamedType
-                                                        { _namedTypeName = Name "String" }
-                                                    )
+                                                , _ivdType = TypeWithNullability
+                                                    { _twnType = GqlTypeNamed
+                                                        ( NamedType
+                                                            { _namedTypeName = Name "String" }
+                                                        )
+                                                    , _twnNullability = True
+                                                    }
                                                 , _ivdDefaultValue = Nothing
                                                 , _ivdDirectives = []
                                                 }
                                             ]
                                         )
-                                    , _fdType = GqlTypeNamed
-                                        ( NamedType
-                                            { _namedTypeName = Name "String" }
-                                        )
+                                    , _fdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _twnNullability = True
+                                        }
                                     , _fdDirectives = []
                                     }
                                 ]

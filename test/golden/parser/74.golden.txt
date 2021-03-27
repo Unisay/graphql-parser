@@ -12,20 +12,26 @@ Right
                                 [ InputValueDefinition
                                     { _ivdDescription = Nothing
                                     , _ivdName = Name "x"
-                                    , _ivdType = GqlTypeNamed
-                                        ( NamedType
-                                            { _namedTypeName = Name "Float" }
-                                        )
+                                    , _ivdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Float" }
+                                            )
+                                        , _twnNullability = True
+                                        }
                                     , _ivdDefaultValue = Nothing
                                     , _ivdDirectives = []
                                     }
                                 , InputValueDefinition
                                     { _ivdDescription = Nothing
                                     , _ivdName = Name "y"
-                                    , _ivdType = GqlTypeNamed
-                                        ( NamedType
-                                            { _namedTypeName = Name "Float" }
-                                        )
+                                    , _ivdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Float" }
+                                            )
+                                        , _twnNullability = True
+                                        }
                                     , _ivdDefaultValue = Nothing
                                     , _ivdDirectives = []
                                     }

@@ -31,20 +31,26 @@ Right
                                         { _fdDescription = Nothing
                                         , _fdName = Name "name"
                                         , _fdArgumentsDefinition = Nothing
-                                        , _fdType = GqlTypeNamed
-                                            ( NamedType
-                                                { _namedTypeName = Name "String" }
-                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "String" }
+                                                )
+                                            , _twnNullability = True
+                                            }
                                         , _fdDirectives = []
                                         }
                                     , FieldDefinition
                                         { _fdDescription = Nothing
                                         , _fdName = Name "age"
                                         , _fdArgumentsDefinition = Nothing
-                                        , _fdType = GqlTypeNamed
-                                            ( NamedType
-                                                { _namedTypeName = Name "Int" }
-                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "Int" }
+                                                )
+                                            , _twnNullability = True
+                                            }
                                         , _fdDirectives = []
                                         }
                                     ]
@@ -67,20 +73,26 @@ Right
                                         { _fdDescription = Nothing
                                         , _fdName = Name "height"
                                         , _fdArgumentsDefinition = Nothing
-                                        , _fdType = GqlTypeNamed
-                                            ( NamedType
-                                                { _namedTypeName = Name "Int" }
-                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "Int" }
+                                                )
+                                            , _twnNullability = True
+                                            }
                                         , _fdDirectives = []
                                         }
                                     , FieldDefinition
                                         { _fdDescription = Nothing
                                         , _fdName = Name "width"
                                         , _fdArgumentsDefinition = Nothing
-                                        , _fdType = GqlTypeNamed
-                                            ( NamedType
-                                                { _namedTypeName = Name "Int" }
-                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "Int" }
+                                                )
+                                            , _twnNullability = True
+                                            }
                                         , _fdDirectives = []
                                         }
                                     ]
@@ -103,10 +115,13 @@ Right
                                         { _fdDescription = Nothing
                                         , _fdName = Name "firstSearchResult"
                                         , _fdArgumentsDefinition = Nothing
-                                        , _fdType = GqlTypeNamed
-                                            ( NamedType
-                                                { _namedTypeName = Name "SearchResult" }
-                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "SearchResult" }
+                                                )
+                                            , _twnNullability = True
+                                            }
                                         , _fdDirectives = []
                                         }
                                     ]
