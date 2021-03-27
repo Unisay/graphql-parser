@@ -1,4 +1,4 @@
-module Graphql.Client.Parser.Types where
+module Graphql.Parser.Types where
 
 import Relude
 import Text.Megaparsec (ParsecT)

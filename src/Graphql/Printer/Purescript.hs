@@ -1,4 +1,4 @@
-module Graphql.Client.Printer.Purescript (printClient) where
+module Graphql.Printer.Purescript (printClient) where
 
 import Relude
 

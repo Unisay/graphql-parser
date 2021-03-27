@@ -1,7 +1,7 @@
 module Test.Parser where
 
-import qualified Graphql.Client.Parser as Parser
-import qualified Graphql.Client.Printer as Printer
+import qualified Graphql.Parser as Parser
+import qualified Graphql.Printer as Printer
 import Relude
 import Test.Tasty (TestTree, testGroup)
 import Text.Megaparsec (eof, errorBundlePretty, runParser)

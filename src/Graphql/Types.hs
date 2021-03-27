@@ -1,4 +1,4 @@
-module Graphql.Client.Types where
+module Graphql.Types where
 
 import Relude
 

@@ -1,6 +1,6 @@
 module Main where
 
--- import qualified Graphql.Client.Parser as Parser
+-- import qualified Graphql.Parser as Parser
 import Relude
 
 main :: IO ()

@@ -1,14 +1,14 @@
 {-# LANGUAGE ApplicativeDo #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module Graphql.Client.Parser where
+module Graphql.Parser where
 
 import qualified Control.Monad.Combinators.NonEmpty as NE
 import qualified Data.Char as Char
 import qualified Data.Map.Strict as Map
 import qualified Data.Text as Text
-import Graphql.Client.Parser.Types (Parser)
-import Graphql.Client.Types
+import Graphql.Parser.Types (Parser)
+import Graphql.Types
 import Relude hiding (many, some)
 import Text.Megaparsec
   ( MonadParsec (label),
@@ -26,14 +26,14 @@ import Text.Megaparsec
   )
 import Text.Megaparsec.Char (alphaNumChar, string)
 import qualified Text.Megaparsec.Char.Lexer as L
-import Text.Megaparsec.Debug
+-- import Text.Megaparsec.Debug
 
 document :: Parser Document
 document = label "Document" do
   Document <$> NE.some definition
 
 definition :: Parser Definition
-definition = dbg "Definition" $ label "Definition" do
+definition = label "Definition" do
   choice
     [ DefinitionExecutable <$> executableDefinition,
       DefinitionTypeSystem <$> typeSystemDefinition
@@ -146,7 +146,7 @@ fieldsDefinition = label "FieldsDefinition" do
   FieldsDefinition <$> braces (some fieldDefinition)
 
 fieldDefinition :: Parser FieldDefinition
-fieldDefinition = dbg "FieldDefinition" $ label "FieldDefinition" do
+fieldDefinition = label "FieldDefinition" do
   _fdDescription <- optional description
   _fdName <- name
   _fdArgumentsDefinition <- optional argumentsDefinition

@@ -1,8 +1,8 @@
-module Graphql.Client.Printer where
+module Graphql.Printer where
 
 import qualified Data.List.NonEmpty as NEL
 import qualified Data.Map as Map
-import Graphql.Client.Types
+import Graphql.Types
 import Prettyprinter
 import Prettyprinter.Render.Text (renderStrict)
 import Relude
