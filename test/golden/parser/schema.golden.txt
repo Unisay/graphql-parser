@@ -1,0 +1,347 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionType
+                ( TypeDefinitionObject
+                    ( ObjectTypeDefinition
+                        { _otdDescription = Nothing
+                        , _otdName = Name "User"
+                        , _otdInterfaces = Nothing
+                        , _otdDirectives = []
+                        , _otdFieldsDefinition = Just
+                            ( FieldsDefinition
+                                [ FieldDefinition
+                                    { _fdDescription = Nothing
+                                    , _fdName = Name "id"
+                                    , _fdArgumentsDefinition = Nothing
+                                    , _fdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "UserId" }
+                                            )
+                                        , _twnNullability = False
+                                        }
+                                    , _fdDirectives = []
+                                    }
+                                , FieldDefinition
+                                    { _fdDescription = Nothing
+                                    , _fdName = Name "email"
+                                    , _fdArgumentsDefinition = Nothing
+                                    , _fdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _twnNullability = False
+                                        }
+                                    , _fdDirectives = []
+                                    }
+                                , FieldDefinition
+                                    { _fdDescription = Nothing
+                                    , _fdName = Name "name"
+                                    , _fdArgumentsDefinition = Nothing
+                                    , _fdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _twnNullability = False
+                                        }
+                                    , _fdDirectives = []
+                                    }
+                                , FieldDefinition
+                                    { _fdDescription = Nothing
+                                    , _fdName = Name "role"
+                                    , _fdArgumentsDefinition = Nothing
+                                    , _fdType = TypeWithNullability
+                                        { _twnType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Role" }
+                                            )
+                                        , _twnNullability = False
+                                        }
+                                    , _fdDirectives = []
+                                    }
+                                ]
+                            )
+                        }
+                    )
+                )
+            ) :|
+            [ DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionEnum
+                        ( EnumTypeDefinition
+                            { _etdDescription = Nothing
+                            , _etdName = Name "Role"
+                            , _etdDirectives = []
+                            , _etdValuesDefinition = Just
+                                ( EnumValuesDefinition
+                                    [ EnumValueDefinition
+                                        { _evdDescription = Nothing
+                                        , _evdEnumValue = Name "RoleAdmin"
+                                        , _evdDirectives = []
+                                        }
+                                    , EnumValueDefinition
+                                        { _evdDescription = Nothing
+                                        , _evdEnumValue = Name "RoleUser"
+                                        , _evdDirectives = []
+                                        }
+                                    , EnumValueDefinition
+                                        { _evdDescription = Nothing
+                                        , _evdEnumValue = Name "RoleAnonymous"
+                                        , _evdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Session"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "token"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "String" }
+                                                )
+                                            , _twnNullability = False
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "user"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "User" }
+                                                )
+                                            , _twnNullability = False
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Query"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "login"
+                                        , _fdArgumentsDefinition = Just
+                                            ( ArgumentsDefinition
+                                                [ InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "email"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                , InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "password"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                ]
+                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "Session" }
+                                                )
+                                            , _twnNullability = False
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "userInfo"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "User" }
+                                                )
+                                            , _twnNullability = True
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "allUsers"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeList
+                                                [ TypeWithNullability
+                                                    { _twnType = GqlTypeNamed
+                                                        ( NamedType
+                                                            { _namedTypeName = Name "User" }
+                                                        )
+                                                    , _twnNullability = False
+                                                    }
+                                                ]
+                                            , _twnNullability = False
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Mutation"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "register"
+                                        , _fdArgumentsDefinition = Just
+                                            ( ArgumentsDefinition
+                                                [ InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "email"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                , InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "password"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                , InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "name"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                ]
+                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "Session" }
+                                                )
+                                            , _twnNullability = False
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "changePassword"
+                                        , _fdArgumentsDefinition = Just
+                                            ( ArgumentsDefinition
+                                                [ InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "oldPassword"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                , InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "newPassword"
+                                                    , _ivdType = TypeWithNullability
+                                                        { _twnType = GqlTypeNamed
+                                                            ( NamedType
+                                                                { _namedTypeName = Name "String" }
+                                                            )
+                                                        , _twnNullability = False
+                                                        }
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                ]
+                                            )
+                                        , _fdType = TypeWithNullability
+                                            { _twnType = GqlTypeNamed
+                                                ( NamedType
+                                                    { _namedTypeName = Name "Boolean" }
+                                                )
+                                            , _twnNullability = False
+                                            }
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            ]
+        )
+    )

@@ -1,0 +1,111 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionType
+                ( TypeDefinitionObject
+                    ( ObjectTypeDefinition
+                        { _otdDescription = Just
+                            ( Description "A simple GraphQL schema which is well described." )
+                        , _otdName = Name "Query"
+                        , _otdInterfaces = Just
+                            ( NamedType
+                                { _namedTypeName = Name "Zoo" } :|
+                                [ NamedType
+                                    { _namedTypeName = Name "Foo" }
+                                , NamedType
+                                    { _namedTypeName = Name "Bar" }
+                                ]
+                            )
+                        , _otdDirectives = []
+                        , _otdFieldsDefinition = Just
+                            ( FieldsDefinition
+                                [ FieldDefinition
+                                    { _fdDescription = Just
+                                        ( Description "Translates a string from a given language into a different language." )
+                                    , _fdName = Name "translate"
+                                    , _fdArgumentsDefinition = Just
+                                        ( ArgumentsDefinition
+                                            [ InputValueDefinition
+                                                { _ivdDescription = Just
+                                                    ( Description "The original language that `text` is provided in." )
+                                                , _ivdName = Name "fromLanguage"
+                                                , _ivdType = GqlTypeNamed
+                                                    ( NamedType
+                                                        { _namedTypeName = Name "Language" }
+                                                    )
+                                                , _ivdDefaultValue = Nothing
+                                                , _ivdDirectives = []
+                                                }
+                                            , InputValueDefinition
+                                                { _ivdDescription = Just
+                                                    ( Description "The translated language to be returned." )
+                                                , _ivdName = Name "toLanguage"
+                                                , _ivdType = GqlTypeNamed
+                                                    ( NamedType
+                                                        { _namedTypeName = Name "Language" }
+                                                    )
+                                                , _ivdDefaultValue = Nothing
+                                                , _ivdDirectives = []
+                                                }
+                                            , InputValueDefinition
+                                                { _ivdDescription = Just
+                                                    ( Description "The text to be translated." )
+                                                , _ivdName = Name "text"
+                                                , _ivdType = GqlTypeNamed
+                                                    ( NamedType
+                                                        { _namedTypeName = Name "String" }
+                                                    )
+                                                , _ivdDefaultValue = Nothing
+                                                , _ivdDirectives = []
+                                                }
+                                            ]
+                                        )
+                                    , _fdType = GqlTypeNamed
+                                        ( NamedType
+                                            { _namedTypeName = Name "String" }
+                                        )
+                                    , _fdDirectives = []
+                                    }
+                                ]
+                            )
+                        }
+                    )
+                )
+            ) :|
+            [ DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionEnum
+                        ( EnumTypeDefinition
+                            { _etdDescription = Just
+                                ( Description "The set of languages supported by `translate`." )
+                            , _etdName = Name "Language"
+                            , _etdDirectives = []
+                            , _etdValuesDefinition = Just
+                                ( EnumValuesDefinition
+                                    [ EnumValueDefinition
+                                        { _evdDescription = Just
+                                            ( Description "English" )
+                                        , _evdEnumValue = Name "EN"
+                                        , _evdDirectives = []
+                                        }
+                                    , EnumValueDefinition
+                                        { _evdDescription = Just
+                                            ( Description "French" )
+                                        , _evdEnumValue = Name "FR"
+                                        , _evdDirectives = []
+                                        }
+                                    , EnumValueDefinition
+                                        { _evdDescription = Just
+                                            ( Description "Chinese" )
+                                        , _evdEnumValue = Name "CH"
+                                        , _evdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            ]
+        )
+    )

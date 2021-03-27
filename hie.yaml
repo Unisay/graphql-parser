@@ -1,0 +1,8 @@
+cradle:
+  cabal:
+    - path: "src"
+      component: "lib:graphql-client-generator"
+    - path: "test"
+      component: "graphql-client-generator:test:tests"
+    - path: "exe/Main.hs"
+      component: "graphql-client-generator:exe:graphql-client-generator"

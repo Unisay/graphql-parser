@@ -1,0 +1,146 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionType
+                ( TypeDefinitionInterface
+                    ( InterfaceTypeDefinition
+                        { _itdDescription = Nothing
+                        , _itdName = Name "NamedEntity"
+                        , _itdDirectives = []
+                        , _itdFieldsDefinition = Just
+                            ( FieldsDefinition
+                                [ FieldDefinition
+                                    { _fdDescription = Nothing
+                                    , _fdName = Name "name"
+                                    , _fdArgumentsDefinition = Nothing
+                                    , _fdType = GqlTypeNamed
+                                        ( NamedType
+                                            { _namedTypeName = Name "String" }
+                                        )
+                                    , _fdDirectives = []
+                                    }
+                                ]
+                            )
+                        }
+                    )
+                )
+            ) :|
+            [ DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionInterface
+                        ( InterfaceTypeDefinition
+                            { _itdDescription = Nothing
+                            , _itdName = Name "ValuedEntity"
+                            , _itdDirectives = []
+                            , _itdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "value"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Person"
+                            , _otdInterfaces = Just
+                                ( NamedType
+                                    { _namedTypeName = Name "NamedEntity" } :| []
+                                )
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "name"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "age"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Business"
+                            , _otdInterfaces = Just
+                                ( NamedType
+                                    { _namedTypeName = Name "NamedEntity" } :|
+                                    [ NamedType
+                                        { _namedTypeName = Name "ValuedEntity" }
+                                    ]
+                                )
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "name"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "value"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "employeeCount"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            ]
+        )
+    )

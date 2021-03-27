@@ -1,0 +1,39 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionType
+                ( TypeDefinitionInputObject
+                    ( InputObjectTypeDefinition
+                        { _iotdDescription = Nothing
+                        , _iotdName = Name "Point2D"
+                        , _iotdDirectives = []
+                        , _iotdFieldsDefinition = Just
+                            ( InputObjectFieldsDefinition
+                                [ InputValueDefinition
+                                    { _ivdDescription = Nothing
+                                    , _ivdName = Name "x"
+                                    , _ivdType = GqlTypeNamed
+                                        ( NamedType
+                                            { _namedTypeName = Name "Float" }
+                                        )
+                                    , _ivdDefaultValue = Nothing
+                                    , _ivdDirectives = []
+                                    }
+                                , InputValueDefinition
+                                    { _ivdDescription = Nothing
+                                    , _ivdName = Name "y"
+                                    , _ivdType = GqlTypeNamed
+                                        ( NamedType
+                                            { _namedTypeName = Name "Float" }
+                                        )
+                                    , _ivdDefaultValue = Nothing
+                                    , _ivdDirectives = []
+                                    }
+                                ]
+                            )
+                        }
+                    )
+                )
+            ) :| []
+        )
+    )

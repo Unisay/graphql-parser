@@ -1,0 +1,28 @@
+type User {
+  id: UserId!
+  email: String!
+  name: String!
+  role: Role!
+}
+
+enum Role {
+  RoleAdmin
+  RoleUser
+  RoleAnonymous
+}
+
+type Session {
+  token: String!
+  user: User!
+}
+
+type Query {
+  login(email: String!, password: String!): Session!
+  userInfo: User
+  allUsers: [User!]!
+}
+
+type Mutation {
+  register(email: String!, password: String!, name: String!): Session!
+  changePassword(oldPassword: String!, newPassword: String!): Boolean!
+}

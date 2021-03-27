@@ -1,0 +1,40 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionType
+                ( TypeDefinitionEnum
+                    ( EnumTypeDefinition
+                        { _etdDescription = Nothing
+                        , _etdName = Name "Direction"
+                        , _etdDirectives = []
+                        , _etdValuesDefinition = Just
+                            ( EnumValuesDefinition
+                                [ EnumValueDefinition
+                                    { _evdDescription = Nothing
+                                    , _evdEnumValue = Name "NORTH"
+                                    , _evdDirectives = []
+                                    }
+                                , EnumValueDefinition
+                                    { _evdDescription = Nothing
+                                    , _evdEnumValue = Name "EAST"
+                                    , _evdDirectives = []
+                                    }
+                                , EnumValueDefinition
+                                    { _evdDescription = Nothing
+                                    , _evdEnumValue = Name "SOUTH"
+                                    , _evdDirectives = []
+                                    }
+                                , EnumValueDefinition
+                                    { _evdDescription = Just
+                                        ( Description "West" )
+                                    , _evdEnumValue = Name "WEST"
+                                    , _evdDirectives = []
+                                    }
+                                ]
+                            )
+                        }
+                    )
+                )
+            ) :| []
+        )
+    )

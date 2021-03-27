@@ -1,0 +1,120 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionType
+                ( TypeDefinitionUnion
+                    ( UnionTypeDefinition
+                        { _utdDescription = Nothing
+                        , _utdName = Name "SearchResult"
+                        , _utdDirectives = []
+                        , _utdMemberTypes =
+                            [ NamedType
+                                { _namedTypeName = Name "Photo" }
+                            , NamedType
+                                { _namedTypeName = Name "Person" }
+                            ]
+                        }
+                    )
+                )
+            ) :|
+            [ DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Person"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "name"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "age"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "Photo"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "height"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    , FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "width"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "Int" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "SearchQuery"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "firstSearchResult"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "SearchResult" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            ]
+        )
+    )

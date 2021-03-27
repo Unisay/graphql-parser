@@ -1,0 +1,87 @@
+Right
+    ( Document
+        ( DefinitionTypeSystem
+            ( TypeSystemDefinitionSchema
+                ( SchemaDefinition
+                    ( RootOperationTypeDefinition
+                        { _rotdOperationType = Query
+                        , _rotdNamedType = NamedType
+                            { _namedTypeName = Name "MyQueryRootType" }
+                        } :|
+                        [ RootOperationTypeDefinition
+                            { _rotdOperationType = Mutation
+                            , _rotdNamedType = NamedType
+                                { _namedTypeName = Name "MyMutationRootType" }
+                            }
+                        ]
+                    )
+                )
+            ) :|
+            [ DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "MyQueryRootType"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "someField"
+                                        , _fdArgumentsDefinition = Nothing
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            , DefinitionTypeSystem
+                ( TypeSystemDefinitionType
+                    ( TypeDefinitionObject
+                        ( ObjectTypeDefinition
+                            { _otdDescription = Nothing
+                            , _otdName = Name "MyMutationRootType"
+                            , _otdInterfaces = Nothing
+                            , _otdDirectives = []
+                            , _otdFieldsDefinition = Just
+                                ( FieldsDefinition
+                                    [ FieldDefinition
+                                        { _fdDescription = Nothing
+                                        , _fdName = Name "setSomeField"
+                                        , _fdArgumentsDefinition = Just
+                                            ( ArgumentsDefinition
+                                                [ InputValueDefinition
+                                                    { _ivdDescription = Nothing
+                                                    , _ivdName = Name "to"
+                                                    , _ivdType = GqlTypeNamed
+                                                        ( NamedType
+                                                            { _namedTypeName = Name "String" }
+                                                        )
+                                                    , _ivdDefaultValue = Nothing
+                                                    , _ivdDirectives = []
+                                                    }
+                                                ]
+                                            )
+                                        , _fdType = GqlTypeNamed
+                                            ( NamedType
+                                                { _namedTypeName = Name "String" }
+                                            )
+                                        , _fdDirectives = []
+                                        }
+                                    ]
+                                )
+                            }
+                        )
+                    )
+                )
+            ]
+        )
+    )

@@ -1,0 +1,39 @@
+Right
+    ( Document
+        ( DefinitionExecutable
+            ( ExecutableDefinition
+                { unwrapExecutableDefinition = OperationDefinitionSelectionSet
+                    ( SelectionSet
+                        [ SelectionField
+                            ( Field
+                                { _fieldAlias = Nothing
+                                , _fieldName = Name "id"
+                                , _fieldArguments = Nothing
+                                , _fieldDirectives = []
+                                , _fieldSelectionSet = Nothing
+                                }
+                            )
+                        , SelectionField
+                            ( Field
+                                { _fieldAlias = Nothing
+                                , _fieldName = Name "firstName"
+                                , _fieldArguments = Nothing
+                                , _fieldDirectives = []
+                                , _fieldSelectionSet = Nothing
+                                }
+                            )
+                        , SelectionField
+                            ( Field
+                                { _fieldAlias = Nothing
+                                , _fieldName = Name "lastName"
+                                , _fieldArguments = Nothing
+                                , _fieldDirectives = []
+                                , _fieldSelectionSet = Nothing
+                                }
+                            )
+                        ]
+                    )
+                }
+            ) :| []
+        )
+    )

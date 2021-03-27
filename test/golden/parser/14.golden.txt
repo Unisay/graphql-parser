@@ -1,0 +1,84 @@
+Right
+    ( Document
+        ( DefinitionExecutable
+            ( ExecutableDefinition
+                { unwrapExecutableDefinition = OperationDefinitionSelectionSet
+                    ( SelectionSet
+                        [ SelectionField
+                            ( Field
+                                { _fieldAlias = Nothing
+                                , _fieldName = Name "user"
+                                , _fieldArguments = Just
+                                    ( Arguments
+                                        [ Argument
+                                            ( Name "id" )
+                                            ( ValueInt 4 )
+                                        ]
+                                    )
+                                , _fieldDirectives = []
+                                , _fieldSelectionSet = Just
+                                    ( SelectionSet
+                                        [ SelectionField
+                                            ( Field
+                                                { _fieldAlias = Nothing
+                                                , _fieldName = Name "id"
+                                                , _fieldArguments = Nothing
+                                                , _fieldDirectives = []
+                                                , _fieldSelectionSet = Nothing
+                                                }
+                                            )
+                                        , SelectionField
+                                            ( Field
+                                                { _fieldAlias = Nothing
+                                                , _fieldName = Name "name"
+                                                , _fieldArguments = Nothing
+                                                , _fieldDirectives = []
+                                                , _fieldSelectionSet = Nothing
+                                                }
+                                            )
+                                        , SelectionField
+                                            ( Field
+                                                { _fieldAlias = Just
+                                                    ( Alias
+                                                        ( Name "smallPic" )
+                                                    )
+                                                , _fieldName = Name "profilePic"
+                                                , _fieldArguments = Just
+                                                    ( Arguments
+                                                        [ Argument
+                                                            ( Name "size" )
+                                                            ( ValueInt 64 )
+                                                        ]
+                                                    )
+                                                , _fieldDirectives = []
+                                                , _fieldSelectionSet = Nothing
+                                                }
+                                            )
+                                        , SelectionField
+                                            ( Field
+                                                { _fieldAlias = Just
+                                                    ( Alias
+                                                        ( Name "bigPic" )
+                                                    )
+                                                , _fieldName = Name "profilePic"
+                                                , _fieldArguments = Just
+                                                    ( Arguments
+                                                        [ Argument
+                                                            ( Name "size" )
+                                                            ( ValueInt 1024 )
+                                                        ]
+                                                    )
+                                                , _fieldDirectives = []
+                                                , _fieldSelectionSet = Nothing
+                                                }
+                                            )
+                                        ]
+                                    )
+                                }
+                            )
+                        ]
+                    )
+                }
+            ) :| []
+        )
+    )

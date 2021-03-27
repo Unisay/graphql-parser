@@ -1,0 +1,7 @@
+{
+  userInfo {
+    id
+    name
+    email
+  }
+}

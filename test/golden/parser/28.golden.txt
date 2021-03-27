@@ -1,0 +1,34 @@
+Right
+    ( Document
+        ( DefinitionExecutable
+            ( ExecutableDefinition
+                { unwrapExecutableDefinition = OperationDefinitionOperation
+                    ( Operation
+                        { _operationType = Mutation
+                        , _operationName = Nothing
+                        , _operationVariableDefs = []
+                        , _operationDirectives = []
+                        , _operationSelectionSet = SelectionSet
+                            [ SelectionField
+                                ( Field
+                                    { _fieldAlias = Nothing
+                                    , _fieldName = Name "ok"
+                                    , _fieldArguments = Just
+                                        ( Arguments
+                                            [ Argument
+                                                ( Name "message" )
+                                                ( ValueString "This does not start with or end with any empty lines,
+                                                which makes it a little harder to read." )
+                                            ]
+                                        )
+                                    , _fieldDirectives = []
+                                    , _fieldSelectionSet = Nothing
+                                    }
+                                )
+                            ]
+                        }
+                    )
+                }
+            ) :| []
+        )
+    )

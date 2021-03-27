@@ -1,0 +1,37 @@
+Right
+    ( Document
+        ( DefinitionExecutable
+            ( ExecutableDefinition
+                { unwrapExecutableDefinition = OperationDefinitionOperation
+                    ( Operation
+                        { _operationType = Mutation
+                        , _operationName = Nothing
+                        , _operationVariableDefs = []
+                        , _operationDirectives = []
+                        , _operationSelectionSet = SelectionSet
+                            [ SelectionField
+                                ( Field
+                                    { _fieldAlias = Nothing
+                                    , _fieldName = Name "sendEmail"
+                                    , _fieldArguments = Just
+                                        ( Arguments
+                                            [ Argument
+                                                ( Name "message" )
+                                                ( ValueString "Hello,
+                                                  World!
+
+                                                Yours,
+                                                  GraphQL." )
+                                            ]
+                                        )
+                                    , _fieldDirectives = []
+                                    , _fieldSelectionSet = Nothing
+                                    }
+                                )
+                            ]
+                        }
+                    )
+                }
+            ) :| []
+        )
+    )
